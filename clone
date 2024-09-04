@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+set -e
+projectRoot=$(a="/$0"; a=${a%/*}; a=${a:-.}; a=${a#/}/; cd "$a/.." || return; pwd)
+
+(
+  cd "${projectRoot}"
+
+  printf "\nCloning ch-tab repositories\n"
+
+  test -d ch-tab-api\
+    && >&2 echo "The 'ch-tab-api' repository already exists. Skipping." \
+    || git clone https://github.com/rtasalem/ch-tab-api.git
+)

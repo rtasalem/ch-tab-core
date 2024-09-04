@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+set -e
+projectRoot="$(a="/$0"; a=${a%/*}; a=${a:-.}; a=${a#/}/; cd "$a/.." || return; pwd)"
+
+show_help() {
+  echo "
+    Usage: path/to/ch-tab-api [OPTION...]
+    Open services in VS Code.
+
+    Options:
+      -h, --help       display this help text
+    "
+}
+
+while :; do
+  case $1 in
+    -h|--help)   # Call a "show_help" function to display a synopsis, then exit.
+      show_help
+      exit
+      ;;
+    *)
+      break
+  esac
+
+  shift
+done
+
+cd "${projectRoot}"
+
+code ./ch-tab-api
