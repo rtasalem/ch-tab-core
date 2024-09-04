@@ -10,17 +10,17 @@ Clone all `ch-tab` microservices from GitHub into parent directory where this re
 Open all `ch-tab` microservicees in Visual Studio Code.<br>
 [`./open`](open)
 ### Build
-Build each Docker containers for all `ch-tab` microservices.<br>
+Build each Docker container for all `ch-tab` microservices.<br>
 [`./build`](build)
 ### Start
 Start all `ch-tab` microservices.<br>
 [`./start`](start)
 ### Stop
-Stop all `ch-tab` microservices<br>
+Stop all `ch-tab` microservices.<br>
 [`./stop`](stop)
 ### Pull
 Pull from current branch of each `ch-tab` microservice.<br>
 [`./pull`](pull)
 ### Update
-Switch to the `main` branch of each `ch-tab` microservice and pull latest changes.<br>
+Switch to `main` branch of each `ch-tab` microservice and pull latest changes.<br>
 [`./update`](update)
